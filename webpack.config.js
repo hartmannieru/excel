@@ -24,7 +24,7 @@ module.exports = (env, argv) => {
         patterns: [
           {
             from: path.resolve(__dirname, 'src', 'favicon.ico'),
-            to: path.resolve(__dirname, 'dist')
+            to: path.resolve(__dirname, 'public')
           },
         ],
       }),
@@ -48,7 +48,7 @@ module.exports = (env, argv) => {
       main: './index.js'
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'public'),
       filename: filename('js')
     },
     resolve: {
@@ -62,7 +62,6 @@ module.exports = (env, argv) => {
       port: '3000',
       open: true,
       hot: true,
-      // static: path.resolve(__dirname, 'src'),
       contentBase: path.resolve(__dirname, 'src'),
       watchContentBase: true,
     },
